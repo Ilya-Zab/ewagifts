@@ -1,0 +1,33 @@
+@import "@/styles/variables.module.scss";
+
+
+.breadcrumbs {
+	margin-top: 64px;
+	display: flex;
+	justify-content: center;
+	@media screen and (max-width: 768px) {
+		margin-top: 34px;
+	}
+	@media screen and (max-width: 600px) {
+		margin-top: 24px;
+	}
+}
+
+.title {
+	text-align: center;
+	margin-top: 50px;
+	@media screen and (max-width: 600px) {
+		margin-top: 35px;
+	}
+}
+.article {
+	margin-top: 40px;
+}
+.pagination {
+	margin-top: 80px;
+	display: flex;
+	justify-content: center;
+	@media screen and (max-width: 600px) {
+		margin-top: 35px;
+	}
+}

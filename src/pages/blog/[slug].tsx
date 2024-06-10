@@ -4,6 +4,7 @@ import {FC} from "react";
 import wpRestApi from "@/services/wordpress/WPRestAPI";
 import {BlogPost} from "@/components/Blog/BlogPost";
 import {BlogNavPosts} from "@/components/Blog/BlogNavPosts";
+import Breadcrumbs from "@/components/Layouts/Breadcrumbs/Breadcrumbs";
 
 interface ArticleProps {
 }
@@ -26,6 +27,7 @@ const Article: FC<ArticleProps> = ({response, prevPost, nextPost}) => {
             </Head>
             <main>
                 <div className="container">
+                    <Breadcrumbs/>
                     <BlogPost post={response}/>
                     <BlogNavPosts  prevPost={prevPost} nextPost={nextPost}/>
                 </div>
@@ -62,7 +64,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
         response = currentPost;
     } catch (error) {
-        console.log(error, '77777777');
         return {
             props: {
                 response: null,
