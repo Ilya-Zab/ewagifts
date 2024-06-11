@@ -2,14 +2,14 @@
 
 
 .breadcrumbs {
-	margin-top: 64px;
+	margin-top: 41px;
 	display: flex;
 	justify-content: center;
 	@media screen and (max-width: 768px) {
 		margin-top: 34px;
 	}
 	@media screen and (max-width: 600px) {
-		margin-top: 24px;
+		margin-top: 14px;
 	}
 }
 

@@ -3,31 +3,59 @@
 .wrapper {
 	max-width: 744px;
 	width: 100%;
-	padding: 0 12px 93px;
+	padding: 0 12px 129px;
 	margin: 0 auto;
+	@media screen and (max-width: 768px) {
+		padding: 0 0 63px;
+	}
+	@media screen and (max-width: 600px) {
+		padding: 0 0 16px;
+	}
 }
+
 .nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 14px;
 	border-top: 1px solid $input-light;
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+		grid-gap: 16px;
+		align-items: flex-start;
+	}
+
 	&__block {
 		display: inline-flex;
 		flex-direction: column;
 		grid-gap: 20px;
-		& a {
-			color: grey;
+
+		span {
+			font-size: 16px;
+			line-height: 24px;
 		}
+
+		& a {
+			font-weight: 600;
+			color: grey;
+			text-decoration: none;
+		}
+
 		&:first-child {
 			justify-content: flex-start;
 			flex-basis: 40%;
 		}
+
 		&:last-child {
 			justify-content: flex-end;
 			text-align: right;
 			flex-basis: 40%;
 			margin-left: auto;
+			@media screen and (max-width: 600px) {
+				text-align: left;
+				justify-content: flex-start;
+				margin-left: 0;
+			}
 		}
 	}
 }

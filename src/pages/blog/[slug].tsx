@@ -1,6 +1,7 @@
 import {GetServerSideProps} from "next";
 import Head from "next/head";
-import {FC} from "react";
+import styles from './styles.module.scss';
+import React, {FC} from "react";
 import wpRestApi from "@/services/wordpress/WPRestAPI";
 import {BlogPost} from "@/components/Blog/BlogPost";
 import {BlogNavPosts} from "@/components/Blog/BlogNavPosts";
@@ -13,12 +14,12 @@ const Article: FC<ArticleProps> = ({response, prevPost, nextPost}) => {
     if (!response) {
         return <p>Loading...</p>;
     }
-    console.log(response);
+
     const breadCurrent = {
         name: response.title.rendered,
         url: response.link,
     };
-    console.log(breadCurrent);
+
     return (
         <>
             <Head>
@@ -27,7 +28,9 @@ const Article: FC<ArticleProps> = ({response, prevPost, nextPost}) => {
             </Head>
             <main>
                 <div className="container">
-                    <Breadcrumbs/>
+                    <div className={styles.breadcrumbs}>
+                        <Breadcrumbs/>
+                    </div>
                     <BlogPost post={response}/>
                     <BlogNavPosts  prevPost={prevPost} nextPost={nextPost}/>
                 </div>

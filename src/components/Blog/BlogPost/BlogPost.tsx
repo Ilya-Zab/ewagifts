@@ -29,6 +29,15 @@ const CustomBox = styled(Box)`
       margin-bottom: 0;
     }
   }
+  @media screen and (max-width: 600px) {
+    .wp-block-image {
+      margin-bottom: 16px;
+    }
+    .wp-block-group {
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+  }
 `;
 
 export const BlogPost = ({ post }) => {
