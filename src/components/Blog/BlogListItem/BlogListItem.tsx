@@ -9,7 +9,7 @@ export const BlogListItem: FC<BlogItemProps> = ({ post }) =>
 {
     return (
         <div key={post.id}>
-            <Link href={post.slug} className={styles.blogItem__image}>
+            <Link href={`/blog/${post.slug}`} className={styles.blogItem__image}>
                 <Image src={post.image_src} alt={post.title} fill style={{ objectFit: 'cover' }} />
             </Link>
             <h2 className={`sub-title ${styles.blogItem__title}`}>
