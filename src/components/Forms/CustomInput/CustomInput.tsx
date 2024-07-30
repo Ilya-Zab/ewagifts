@@ -39,7 +39,6 @@ export const CustomInput: FC<CustomInputProps> = ({
         type = 'checkbox';
         inputClass = styles.customInput__checkbox;
     }
-
     useEffect(() =>
     {
         if (setValue && name && initialValue !== null && initialValue !== '')
